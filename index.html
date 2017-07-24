@@ -4,16 +4,17 @@
 <head>
 
 	<title>Fresh Prince of Bel-Air Trivia Game</title>
-
+	<!-- JQuery -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<!-- Bootstrap -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<!-- Stylesheets -->
 	<link rel= "stylesheet" type= "text/css" href="assets/css/reset.css">
 	<link rel="stylesheet" type= "text/css" href="assets/css/style.css">	
 	<!-- JQuery -->
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Links Javascript to HTML -->
+	<script type="text/javascript" src="assets/javascript/app.js"></script>
 
 </head>
 
@@ -28,17 +29,19 @@
 	If timer runs out before user clicks done, game is over.
 	Also a button option to start over.
  -->
-	<div class="container">
+ <!-- Container holds trivia game -->
+	<div class id="container">
  		<div class= row>
- 			<h1 id="title"> Fresh Prince of Bel-Air Trivia Game!</h1>
+ 			<h1 id="title"> The Fresh Prince of Bel-Air Trivia!</h1>
  		</div>
 
- 		<div class= "row" id="timeRemaining">
+ 		<div class= "row" id="timeRemaining">Time Remaining: 
  		</div>
 
- 		<div class="triviaQuestions">
- 			<form name="myQuiz" method="post" name="buttons" onsubmit="return false"> 
+ 		<div class="row" id="triviaQuestions">
+ 			<form name="FPQuiz" method="post" name="buttons" onsubmit="return false"> 
     	<!-- <input type="questions" class="form-control" id="questionOne"> -->
+				<button id="start" type="start" class="btn btn-default">Start</button>
 				<div class="question" id="questionOne">
 					<p> 1. Who is the main character of Fresh Prince of Bel-Air?</p>
 				</div>
@@ -49,45 +52,52 @@
 				<div class="question" id="questionTwo">
 					<p> 2. Who is Will's best friend?</p>
 				</div>
-				<input type="radio" name="ques2" value="false"> Master Williams
-				<input type="radio" name="ques2" value="false"> Ashley
-				<input type="radio" name="ques2" value="true"> Jazz
+				<input id="choices" type="radio" name="ques2" value="false"> Master Williams
+				<input id="choices" type="radio" name="ques2" value="false"> Ashley
+				<input id="choices" type="radio" name="ques2" value="true"> Jazz
 
 				<div class="question" id="questionThree">
 					<p> 3. Which character is not a part of the Fresh Prince of Bel-Air cast?</p>
 				</div>
-				<input type="radio" name="ques3" value="true"> Martin
-				<input type="radio" name="ques3" value="false"> Aunt Vivian
-				<input type="radio" name="ques3" value="false"> Geoffrey
+				<input id="choices" type="radio" name="ques3" value="true"> Martin
+				<input id="choices" type="radio" name="ques3" value="false"> Aunt Vivian
+				<input id="choices" type="radio" name="ques3" value="false"> Geoffrey
 
 				<div class="question" id="questionFour">
 					<p> 4. Will helped his little cousin Ashley become a...?</p>
 				</div>
-				<input type="radio" name="ques4" value="false"> chef
-				<input type="radio" name="ques4" value="true"> singer
-				<input type="radio" name="ques4" value="false"> magician
+				<input id="choices" type="radio" name="ques4" value="false"> chef
+				<input id="choices" type="radio" name="ques4" value="true"> singer
+				<input id="choices" type="radio" name="ques4" value="false"> magician
 
 				<div class="question" id="questionFive">
 					<p> 5. Where was Will born and raised?</p>
 				</div>
-				<input type="radio" name="ques5" value="true"> West Philadelphia
-				<input type="radio" name="ques5" value="false"> Atlanta
-				<input type="radio" name="ques5" value="false"> Miami
+				<input id="choices" type="radio" name="ques5" value="true"> West Philadelphia
+				<input id="choices" type="radio" name="ques5" value="false"> Atlanta
+				<input id="choices" type="radio" name="ques5" value="false"> Miami
 
 				<div class="question" id="questionSix">
 					<p> 6. What is Uncle Phil's profession?</p>
 				</div>
-				<input type="radio" name="ques6" value="false"> Banker
-				<input type="radio" name="ques6" value="false"> Professor
-				<input type="radio" name="ques6" value="true"> Judge
+				<input id="choices" type="radio" name="ques6" value="false"> Banker
+				<input id="choices" type="radio" name="ques6" value="false"> Professor
+				<input id="choices" type="radio" name="ques6" value="true"> Judge
 
 				<div class="question" id="questionSeven">
 					<p> 7. Who was Hilary's fiance'?</p>
 				</div>
-				<input type="radio" name="ques7" value="false"> Travis
-				<input type="radio" name="ques7" value="true"> Trevor
-				<input type="radio" name="ques7" value="false"> Jazz 
-
+				<input id="choices" type="radio" name="ques7" value="false"> Travis
+				<input id="choices" type="radio" name="ques7" value="true"> Trevor
+				<input id="choices" type="radio" name="ques7" value="false"> Jazz 
+				<br>
+				<button id="submit" type="submit" class="btn btn-default">Submit</button>
+			</form>
+		</div>
+	</div>
+	
+</body>
+</html>
 
 
 
@@ -95,14 +105,14 @@
 
 
   				
-  	</div>
+  	
 				
   
   
-  <button type="submit" class="btn btn-default">Submit</button>
-</form>
+  
 
 
 
-</body>
+
+
 </html>
