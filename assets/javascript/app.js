@@ -11,13 +11,12 @@ window.onload = function(){
 	// $("start").on("click", decrement);
 	// $("stop").on("click", stop);
 
-	// Post timer to html page
-	$("#timeRemaining").html("<h2>"Time Remaining:  + timer + "</h2>");
-
 	// Once user presses start, activate the timer
 	function start(){
 		intervalId = setInterval(decrement,1000);
 		// console.log(intervalId);
+		// Post timer to html page
+		$("#timeRemaining").html(timer);
 	}
 	// Run the timer down. Once gets to zero alert "Time is up"
 	function decrement(){
@@ -37,23 +36,24 @@ window.onload = function(){
 		}
 	}
 }
- 
+ 	// When the submit button is pressed, stop timer. Then calculate number correct and incorrect
  	$(".submit").on("click", function(){
  		timeUp();   
- 	 	numCorrect();
- 	 })
-
- 	function stop(){
- 		clearInterval(intervalId);
- 	}
-
- 	if ("choices").value==="true"{
+ 	 	if ("choices").value==="true"{
  		numCorrect+++;
  	}
+
  	if ("choices").value==="false"{
  		numIncorrect+++;
  	}
  	
  
+ 	 })
+ 	// This function clears the timer and number correct/incorrect. It basically starts the game over
+ 	function stop(){
+ 		clearInterval(intervalId);
+ 	}
+
+
  	
  	
